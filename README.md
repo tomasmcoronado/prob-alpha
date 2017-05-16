@@ -1,4 +1,4 @@
-This .zip contains four Python modules containing 
+This package contains four Python modules containing 
 * the Shape class and its associated methods and functions, 
 * the PhyloTree class and its associated methods and functions,
 * the Probs module with all the probability functions.
