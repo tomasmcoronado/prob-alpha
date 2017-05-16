@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Probs</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Probs</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/usuario/Descargas/SageMath/Probs.py">/home/usuario/Descargas/SageMath/Probs.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;computes&nbsp;the&nbsp;probabilities&nbsp;and&nbsp;functions&nbsp;defined&nbsp;in&nbsp;the&nbsp;article,&nbsp;for&nbsp;binary&nbsp;trees&nbsp;only.<br>
+In&nbsp;order&nbsp;to&nbsp;do&nbsp;that,&nbsp;we&nbsp;need&nbsp;to&nbsp;import&nbsp;these&nbsp;modules.<br>
+Variable&nbsp;`a`&nbsp;represents&nbsp;the&nbsp;alpha&nbsp;in&nbsp;Ford's&nbsp;Alpha&nbsp;model.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PhyloTree.html">PhyloTree</a><br>
+</td><td width="25%" valign=top><a href="Shape.html">Shape</a><br>
+</td><td width="25%" valign=top><a href="newick.html">newick</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Gamma_alpha"><strong>Gamma_alpha</strong></a>(n)</dt><dd><tt>Compute&nbsp;the&nbsp;Gamma-Alpha&nbsp;function&nbsp;of&nbsp;n.<br>
+:param&nbsp;n:&nbsp;Given&nbsp;integer.<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-Pi"><strong>Pi</strong></a>(T)</dt><dd><tt>Compute&nbsp;the&nbsp;product&nbsp;in&nbsp;Proposition&nbsp;2.<br>
+:param&nbsp;T:&nbsp;A&nbsp;given&nbsp;`Shape`&nbsp;object&nbsp;(it&nbsp;depends&nbsp;only&nbsp;on&nbsp;the&nbsp;topology&nbsp;of&nbsp;T).<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-phi"><strong>phi</strong></a>(n, m)</dt><dd><tt>Compute&nbsp;phi&nbsp;as&nbsp;defined&nbsp;in&nbsp;the&nbsp;article.<br>
+:param&nbsp;n,&nbsp;m:&nbsp;Given&nbsp;integers.<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-prob"><strong>prob</strong></a>(T)</dt><dd><tt>Compute&nbsp;the&nbsp;probability&nbsp;of&nbsp;generating&nbsp;T&nbsp;under&nbsp;the&nbsp;Alpha&nbsp;model&nbsp;by&nbsp;Ford.&nbsp;<br>
+Given&nbsp;an&nbsp;instance&nbsp;of&nbsp;`Shape`,&nbsp;it&nbsp;computes&nbsp;the&nbsp;probability&nbsp;of&nbsp;generating&nbsp;the&nbsp;given&nbsp;shape.<br>
+Given&nbsp;an&nbsp;instance&nbsp;of&nbsp;`PhyloTree`&nbsp;that&nbsp;is&nbsp;a&nbsp;phylogenetic&nbsp;tree&nbsp;--i.e.,&nbsp;such&nbsp;that&nbsp;does&nbsp;not&nbsp;have&nbsp;repeated&nbsp;labels--,&nbsp;it&nbsp;<br>
+computes&nbsp;the&nbsp;probability&nbsp;of&nbsp;generating&nbsp;the&nbsp;given&nbsp;tree.<br>
+:param&nbsp;T:&nbsp;The&nbsp;instance&nbsp;of&nbsp;`Shape`&nbsp;of&nbsp;which&nbsp;we&nbsp;want&nbsp;to&nbsp;compute&nbsp;the&nbsp;probability.<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-prob_shape"><strong>prob_shape</strong></a>(T)</dt><dd><tt>Compute&nbsp;the&nbsp;probability&nbsp;of&nbsp;generating&nbsp;the&nbsp;shape&nbsp;of&nbsp;T&nbsp;under&nbsp;the&nbsp;Alpha&nbsp;model&nbsp;by&nbsp;Ford,&nbsp;assuming&nbsp;T&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;`Shape`&nbsp;--i.e.,<br>
+that&nbsp;it&nbsp;is&nbsp;only&nbsp;the&nbsp;shape&nbsp;of&nbsp;a&nbsp;tree.<br>
+:param&nbsp;T:&nbsp;The&nbsp;instance&nbsp;of&nbsp;`Shape`&nbsp;of&nbsp;which&nbsp;we&nbsp;want&nbsp;to&nbsp;compute&nbsp;the&nbsp;probability.<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-prob_tree"><strong>prob_tree</strong></a>(T)</dt><dd><tt>Compute&nbsp;the&nbsp;probability&nbsp;of&nbsp;generating&nbsp;T&nbsp;under&nbsp;the&nbsp;Alpha&nbsp;model&nbsp;by&nbsp;Ford,&nbsp;assuming&nbsp;T&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;`PhyloTree`.&nbsp;<br>
+Given&nbsp;an&nbsp;instance&nbsp;of&nbsp;`Shape`,&nbsp;it&nbsp;computes&nbsp;the&nbsp;probability&nbsp;of&nbsp;a&nbsp;phylogenetic&nbsp;tree&nbsp;with&nbsp;its&nbsp;shape.<br>
+:param&nbsp;T:&nbsp;The&nbsp;instance&nbsp;of&nbsp;`PhyloTree`&nbsp;of&nbsp;which&nbsp;we&nbsp;want&nbsp;to&nbsp;compute&nbsp;the&nbsp;probability.<br>
+:return:&nbsp;A&nbsp;symbolic&nbsp;expression&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-shape_probs_from_file"><strong>shape_probs_from_file</strong></a>(fname, encoding<font color="#909090">='utf8'</font>, strip_comments<font color="#909090">=False</font>, **kw)</dt><dd><tt>Load&nbsp;a&nbsp;list&nbsp;of&nbsp;instances&nbsp;of&nbsp;`Shape`&nbsp;from&nbsp;a&nbsp;Newick&nbsp;formatted&nbsp;file&nbsp;and&nbsp;return&nbsp;their&nbsp;probabilities&nbsp;in&nbsp;a&nbsp;list,&nbsp;assuming<br>
+they&nbsp;are&nbsp;instances&nbsp;of&nbsp;`Shape`.<br>
+:param&nbsp;fname:&nbsp;file&nbsp;path.<br>
+:param&nbsp;strip_comments:&nbsp;Flag&nbsp;signaling&nbsp;whether&nbsp;to&nbsp;strip&nbsp;comments&nbsp;enclosed&nbsp;in&nbsp;square&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brackets.<br>
+:param&nbsp;kw:&nbsp;Keyword&nbsp;arguments&nbsp;are&nbsp;passed&nbsp;through&nbsp;to&nbsp;`Node.read`.<br>
+:return:&nbsp;A&nbsp;list&nbsp;of&nbsp;symbolic&nbsp;expressions&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-shape_probs_from_list"><strong>shape_probs_from_list</strong></a>(X)</dt><dd><tt>Return&nbsp;the&nbsp;probabilities&nbsp;of&nbsp;all&nbsp;the&nbsp;instances&nbsp;of&nbsp;`Shape`&nbsp;in&nbsp;a&nbsp;list&nbsp;(in&nbsp;string)&nbsp;of&nbsp;Newick&nbsp;codes.<br>
+:param&nbsp;X:&nbsp;a&nbsp;string&nbsp;containing&nbsp;several&nbsp;Newick&nbsp;codes.<br>
+:return:&nbsp;A&nbsp;list&nbsp;of&nbsp;symbolic&nbsp;expressions&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-tree_probs_from_file"><strong>tree_probs_from_file</strong></a>(fname, encoding<font color="#909090">='utf8'</font>, strip_comments<font color="#909090">=False</font>, **kw)</dt><dd><tt>Load&nbsp;a&nbsp;list&nbsp;of&nbsp;instances&nbsp;of&nbsp;`PhyloTree`&nbsp;from&nbsp;a&nbsp;Newick&nbsp;formatted&nbsp;file&nbsp;and&nbsp;return&nbsp;their&nbsp;probabilities&nbsp;in&nbsp;a&nbsp;list,&nbsp;assuming<br>
+they&nbsp;are&nbsp;instances&nbsp;of&nbsp;`PhyloTree`.<br>
+:param&nbsp;fname:&nbsp;file&nbsp;path.<br>
+:param&nbsp;strip_comments:&nbsp;Flag&nbsp;signaling&nbsp;whether&nbsp;to&nbsp;strip&nbsp;comments&nbsp;enclosed&nbsp;in&nbsp;square&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brackets.<br>
+:param&nbsp;kw:&nbsp;Keyword&nbsp;arguments&nbsp;are&nbsp;passed&nbsp;through&nbsp;to&nbsp;`Node.read`.<br>
+:return:&nbsp;A&nbsp;list&nbsp;of&nbsp;symbolic&nbsp;expressions&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+ <dl><dt><a name="-tree_probs_from_list"><strong>tree_probs_from_list</strong></a>(X)</dt><dd><tt>Return&nbsp;the&nbsp;probabilities&nbsp;of&nbsp;all&nbsp;the&nbsp;instances&nbsp;of&nbsp;`PhyloTree`&nbsp;in&nbsp;a&nbsp;list&nbsp;(in&nbsp;string)&nbsp;of&nbsp;Newick&nbsp;codes.<br>
+:param&nbsp;X:&nbsp;a&nbsp;string&nbsp;containing&nbsp;several&nbsp;Newick&nbsp;codes.<br>
+:return:&nbsp;A&nbsp;list&nbsp;of&nbsp;symbolic&nbsp;expressions&nbsp;depending&nbsp;on&nbsp;`a`.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)</td></tr></table>
+</body></html>

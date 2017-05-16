@@ -1,0 +1,146 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Shape</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Shape</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/usuario/Descargas/SageMath/Shape.py">/home/usuario/Descargas/SageMath/Shape.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;`<a href="#Shape">Shape</a>`&nbsp;represents&nbsp;a&nbsp;topological&nbsp;tree.&nbsp;The&nbsp;data&nbsp;structure&nbsp;implemented&nbsp;here&nbsp;is&nbsp;of&nbsp;recursive&nbsp;type:&nbsp;a&nbsp;`<a href="#Shape">Shape</a>`&nbsp;can&nbsp;be&nbsp;either<br>
+a&nbsp;leaf&nbsp;or&nbsp;a&nbsp;list&nbsp;of&nbsp;`<a href="#Shape">Shape</a>`&nbsp;objects.&nbsp;Leaves&nbsp;are&nbsp;not&nbsp;distinguishable,&nbsp;but&nbsp;we&nbsp;know&nbsp;that&nbsp;they&nbsp;are&nbsp;leaves.<br>
+We&nbsp;choose&nbsp;a&nbsp;sorted&nbsp;shape&nbsp;to&nbsp;be&nbsp;the&nbsp;class&nbsp;representant&nbsp;of&nbsp;all&nbsp;shapes&nbsp;isomorphic&nbsp;to&nbsp;it.<br>
+In&nbsp;order&nbsp;to&nbsp;read&nbsp;Newick&nbsp;codes&nbsp;we&nbsp;import&nbsp;the&nbsp;newick&nbsp;module&nbsp;from&nbsp;https://github.com/glottobank/python-newick.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="newick.html">newick</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Shape.html#Shape">Shape</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Shape">class <strong>Shape</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instance&nbsp;is&nbsp;either&nbsp;a&nbsp;leaf&nbsp;or&nbsp;a&nbsp;list&nbsp;of&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instances&nbsp;that&nbsp;hang&nbsp;from&nbsp;a&nbsp;root.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Shape-__eq__"><strong>__eq__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;equal&nbsp;to&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__ge__"><strong>__ge__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;greater&nbsp;or&nbsp;equal&nbsp;than&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__gt__"><strong>__gt__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;greater&nbsp;than&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__init__"><strong>__init__</strong></a>(self, children)</dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>.&nbsp;<br>
+The&nbsp;boolean&nbsp;is_leaf&nbsp;is&nbsp;True&nbsp;if&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;is&nbsp;a&nbsp;leaf;&nbsp;it&nbsp;is&nbsp;False&nbsp;otherwise.<br>
+:param&nbsp;children:&nbsp;if&nbsp;not&nbsp;is_leaf,&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;objects&nbsp;which&nbsp;are&nbsp;descendants&nbsp;of&nbsp;the&nbsp;considered&nbsp;<a href="__builtin__.html#object">object</a>;&nbsp;<br>
+otherwise,&nbsp;`None`.<br>
+:return:&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__le__"><strong>__le__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;less&nbsp;or&nbsp;equal&nbsp;than&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__lt__"><strong>__lt__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;less&nbsp;than&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-__ne__"><strong>__ne__</strong></a>(self, T2)</dt><dd><tt>Uses&nbsp;the&nbsp;comparing&nbsp;method&nbsp;above&nbsp;to&nbsp;decide&nbsp;if&nbsp;self&nbsp;is&nbsp;not&nbsp;equal&nbsp;to&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-compare"><strong>compare</strong></a>(self, T2)</dt><dd><tt>Compare&nbsp;self&nbsp;with&nbsp;another&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>.&nbsp;We&nbsp;use&nbsp;lexicographical&nbsp;order&nbsp;in&nbsp;order&nbsp;to&nbsp;compare&nbsp;two&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instances.&nbsp;<br>
+Leaves&nbsp;in&nbsp;this&nbsp;case&nbsp;are&nbsp;indistinguishable.&nbsp;It&nbsp;returns&nbsp;anint&nbsp;c,&nbsp;which&nbsp;is&nbsp;0&nbsp;if&nbsp;self&nbsp;and&nbsp;T2&nbsp;are&nbsp;equal,&nbsp;&lt;&nbsp;0&nbsp;if&nbsp;self&nbsp;&lt;&nbsp;T2,&nbsp;<br>
+and&nbsp;&gt;&nbsp;0&nbsp;if&nbsp;self&nbsp;&gt;&nbsp;T2.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;int&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-count_leaves"><strong>count_leaves</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;leaves&nbsp;in&nbsp;self.<br>
+:return:&nbsp;int&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-count_symmetries"><strong>count_symmetries</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;symmetric&nbsp;interior&nbsp;nodes&nbsp;in&nbsp;self.<br>
+:return:&nbsp;int&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-is_symmetric"><strong>is_symmetric</strong></a>(self)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;the&nbsp;root&nbsp;of&nbsp;self&nbsp;is&nbsp;a&nbsp;symmetric&nbsp;node,&nbsp;and&nbsp;False&nbsp;otherwise.&nbsp;If&nbsp;self&nbsp;is&nbsp;a&nbsp;leaf,&nbsp;it&nbsp;returns&nbsp;True:<br>
+ex&nbsp;falso&nbsp;quodlibet.<br>
+:return:&nbsp;int&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-iso"><strong>iso</strong></a>(self, T2)</dt><dd><tt>Since&nbsp;our&nbsp;`<a href="#Shape">Shape</a>`&nbsp;objects&nbsp;are&nbsp;sorted,&nbsp;to&nbsp;know&nbsp;whether&nbsp;two&nbsp;trees&nbsp;are&nbsp;isomorphic&nbsp;or&nbsp;not&nbsp;it&nbsp;suffices&nbsp;to&nbsp;know&nbsp;whether<br>
+they&nbsp;are&nbsp;equal&nbsp;or&nbsp;not.<br>
+:param&nbsp;T2:&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;against&nbsp;which&nbsp;we&nbsp;compare&nbsp;self.<br>
+:return:&nbsp;bool&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-labels"><strong>labels</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;with&nbsp;the&nbsp;labels&nbsp;that&nbsp;appear&nbsp;in&nbsp;self,&nbsp;sorted&nbsp;in&nbsp;lexicographical&nbsp;order.<br>
+Since&nbsp;we&nbsp;only&nbsp;use&nbsp;1's&nbsp;as&nbsp;flags&nbsp;for&nbsp;leaves,&nbsp;the&nbsp;output&nbsp;is&nbsp;[1].<br>
+:return:&nbsp;list&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-shape"><strong>shape</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;`<a href="#Shape">Shape</a>`&nbsp;associated&nbsp;to&nbsp;self.&nbsp;Namely,&nbsp;it&nbsp;"forgets"&nbsp;the&nbsp;labels&nbsp;of&nbsp;the&nbsp;leafs.<br>
+:return:&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-sort"><strong>sort</strong></a>(self)</dt><dd><tt>Sorts&nbsp;self&nbsp;using&nbsp;graduate&nbsp;lexicographical&nbsp;order.</tt></dd></dl>
+
+<dl><dt><a name="Shape-to_newick"><strong>to_newick</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;representing&nbsp;the&nbsp;simplified&nbsp;Newick&nbsp;code&nbsp;of&nbsp;self.<br>
+:return:&nbsp;string&nbsp;instance.</tt></dd></dl>
+
+<dl><dt><a name="Shape-to_newick_tuple"><strong>to_newick_tuple</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;tuple&nbsp;representing&nbsp;the&nbsp;simplified&nbsp;Newick&nbsp;code&nbsp;of&nbsp;self.&nbsp;Leaves&nbsp;are&nbsp;marked&nbsp;as&nbsp;1's,&nbsp;since&nbsp;we&nbsp;do&nbsp;not&nbsp;distinguish&nbsp;them.<br>
+:return:&nbsp;tuple&nbsp;instance.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-from_newick"><strong>from_newick</strong></a>(X)</dt><dd><tt>Create&nbsp;a&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;from&nbsp;a&nbsp;Newick&nbsp;code&nbsp;entered&nbsp;as&nbsp;a&nbsp;string.<br>
+:param&nbsp;X:&nbsp;a&nbsp;string&nbsp;representing&nbsp;a&nbsp;Newick&nbsp;code.<br>
+:return:&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instance.</tt></dd></dl>
+ <dl><dt><a name="-from_newick_list"><strong>from_newick_list</strong></a>(X)</dt><dd><tt>Create&nbsp;a&nbsp;list&nbsp;of&nbsp;`<a href="#Shape">Shape</a>`&nbsp;objects&nbsp;from&nbsp;a&nbsp;list&nbsp;of&nbsp;Newick&nbsp;codes&nbsp;entered&nbsp;as&nbsp;a&nbsp;string.<br>
+:param&nbsp;X:&nbsp;a&nbsp;string&nbsp;representing&nbsp;a&nbsp;list&nbsp;of&nbsp;Newick&nbsp;codes.<br>
+:return:&nbsp;[`<a href="#Shape">Shape</a>`]&nbsp;instance.</tt></dd></dl>
+ <dl><dt><a name="-newick_node_to_shape"><strong>newick_node_to_shape</strong></a>(N)</dt><dd><tt>Create&nbsp;a&nbsp;`<a href="#Shape">Shape</a>`&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;from&nbsp;a&nbsp;`Node`&nbsp;<a href="__builtin__.html#object">object</a>.<br>
+:param&nbsp;N:&nbsp;a&nbsp;`Node`.<br>
+:return:&nbsp;`<a href="#Shape">Shape</a>`&nbsp;instance.</tt></dd></dl>
+ <dl><dt><a name="-shapes_from_file"><strong>shapes_from_file</strong></a>(fname, encoding<font color="#909090">='utf8'</font>, strip_comments<font color="#909090">=False</font>, **kw)</dt><dd><tt>Load&nbsp;a&nbsp;list&nbsp;of&nbsp;shapes&nbsp;from&nbsp;a&nbsp;Newick&nbsp;formatted&nbsp;file.<br>
+:param&nbsp;fname:&nbsp;file&nbsp;path.<br>
+:param&nbsp;strip_comments:&nbsp;Flag&nbsp;signaling&nbsp;whether&nbsp;to&nbsp;strip&nbsp;comments&nbsp;enclosed&nbsp;in&nbsp;square&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brackets.<br>
+:param&nbsp;kw:&nbsp;Keyword&nbsp;arguments&nbsp;are&nbsp;passed&nbsp;through&nbsp;to&nbsp;`Node.read`.<br>
+:return:&nbsp;[`<a href="#Shape">Shape</a>`]&nbsp;instance.</tt></dd></dl>
+</td></tr></table>
+</body></html>
