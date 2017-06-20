@@ -28,38 +28,6 @@ class PhyloTree(Shape):
         self.leaf = leaf
         assert not self.is_leaf or (leaf is not None)
 
-
-    def compare(self, T2):
-        """
-        Compare self with another `PhyloTree` object. We use lexicographical order in order to compare two `PhyloTree` 
-        instances. This method overrides that of `Shape`, since any two `PhyloTree` leaves are comparable. It returns an
-        int c, which is 0 if self and T2 are equal, < 0 if self < T2, and > 0 if self > T2.
-        :param T2: the `PhyloTree` object against which we compare self.
-        :return: int instance.
-        """
-        if self.is_leaf and T2.is_leaf:
-            if self.leaf   > T2.leaf:
-                return 1
-            elif self.leaf < T2.leaf:
-                return -1
-            else:
-                return 0
-        elif self.is_leaf:
-            return -1
-        elif T2.is_leaf:
-            return 1
-        else:
-            c = len(self.children) - len(T2.children)
-            if c != 0:
-                return c
-
-            for i in range(0, len(self.children)):
-                c = self.children[i].compare(T2.children[i])
-                if c != 0:
-                    return c
-            return 0
-
-
     def shape(self):
         """
         Returns the `Shape` associated to self. Namely, it "forgets" the labels of the leafs.
